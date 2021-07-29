@@ -504,7 +504,6 @@ if __name__ == '__main__':
             panel.attributes('-topmost', True)
             sim.set_new_intersection_callback(panel.add_intersection)
             _console.set_callback(panel.add_to_console)
-            app.init(sim.light, sim.sms)
             panel.mainloop()
         else:
             raise TypeError(f"Simulator didn't defined within "
@@ -515,3 +514,4 @@ if __name__ == '__main__':
     thread.start()
     thread.join(0.5)
     thread2.start()
+    app.init(sim.light, sim.sms)
